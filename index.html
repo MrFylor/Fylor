@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mon Portfolio</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul id="menu">
+				<li class="active">
+					<a id="accueil" href="#accueil" class="js-scrollTo">Accueil</a>
+				</li>
+				<li>
+					<a id="about" href="#gotoabout" class="js-scrollTo">A propos de moi</a>
+				</li>
+				<li>
+					<a id="creations" href="pages/seconde-page.html#creations" target="_blank" class="js-scrollTo">Créations</a>
+				</li>
+				<li>
+					<a id="contact" href="#gotocontact" class="js-scrollTo">Contact</a>
+				</li>
+				<a href="https://www.youtube.com/channel/UC8-sl3EV-0Vv5Gv-DIawZ1w" target="_blank">
+					<div class="logoyoutube"></div>
+				</a>
+				<a href="https://twitter.com/MrFylor" target="_blank">
+					<div class="logotwitter"></div>
+				</a>
+				<a href="https://www.instagram.com/mrfylor/" target="_blank">
+					<div class="logoinstagram"></div>
+				</a>
+			</ul>
+		</nav>
+	</header>
+	<div class="bannerbackground">
+		<div class="bannertext">
+			Fylor
+			<br>
+			<br>
+			<div class="bannertextsmall">
+				"Rien n'est facile mais tout est possible."
+			</div>
+		</div>
+	</div>
+	<section class="wrapper wrapper-1" id="gotoabout">
+		<img src="img/photoprofil.png" id="photoprofil">
+		<h2 class="textbody" >Qui-suis-je ?</h2>
+		<div class="bannertextsmall">Axel, 18 ans, je vis à Bordeaux. Depuis plusieurs années, vous pouvez me retrouver sur YouTube, où je fais des vidéos, sujet de la vie, développement personnel ainsi que tutoriels sur différents logiciels de graphismes et de montages vidéo. En bref tout ce que j'ai envie de faire, je ne me fixe pas de limite. Passionné par le graphisme, le web, le montage vidéo, la photographie, la mode, le mannequinat et la musculation, autant de passion qui m'occupent au quotidien.</div>
+	</section>
+	<section>
+		<div class="wrapper wrapper-2">
+			<div id="skills1"></div>
+			<div id="skills2"></div>
+			<div id="skills3"></div>
+			<div id="skills4"></div>
+		</div>
+		<div class="wrapper wrapper-3">
+			<h2 id="textskills1">Graphisme</h2>
+			<h2 id="textskills2">Web</h2>
+			<h2 id="textskills3">Montage vidéo</h2>
+			<h2 id="textskills4">Photographie</h2>
+		</div>
+	</section>
+	<section>
+		<div class="school">
+			<div class="texthightschool">Master chef de projet multimédia à ESTEI</div>
+			<div class="textschool">Je suis un cursus en Infographie et Multimédia dans une école privée ESTEI, qui se situe dans le campus Ynov. Ce cursus dure 5 ans et me permettra d'obtenir un Master Chef de projet multimédia. Mes professeurs sont tous des professionels du milieu, aussi ils m'offrent leurs expériences et leur savoir faire du terrain. C'est un cursus complet qui me permet d'être sur tous les fronts et de toucher à tout : le web, le graphisme, la vidéo, la communication, le management, etc.</div>
+		</div>
+	</section>
+	<footer>
+		<div class="contactme" id="gotocontact">
+			<form action="/ma-page-de-traitement" method="post">
+				<div>
+					<label for="name">Nom :</label>
+					<input type="text" id="name" name="user_name">
+				</div>
+				<div>
+					<label for="mail">E-mail :</label>
+					<input type="email" id="mail" name="user_mail">
+				</div>
+				<div>
+					<label for="msg">Message :</label>
+					<textarea id="msg" name="user_message"></textarea>
+				</div>
+				<div class="button">
+					<button type="submit">Envoyer le message</button>
+				</div>
+			</form>
+			<img id="signaturefylor2" src="img/signature fylordesign.png" alt="signature">
+		</div>
+	</footer>
+	<!--  -->
+	<!-- JS SCROLL TO -->
+	<!--  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- <script src="js/script.js"></script> -->
+	<script>
+		$(document).ready(function() {
+				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+				var page = $(this).attr('href'); // Page cible
+				var speed = 1000; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // GO
+					return false;
+				});
+			});
+		</script>
+	</body>
+	</html>
